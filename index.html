@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="view-image">
+        <img src="https://cdn.pixabay.com/photo/2019/02/22/17/47/donkey-4014039_1280.jpg" alt="">
+        <span>X</span>
+    </div>
+
+    <div class="image-container">
+
+
+        <img src="https://cdn.pixabay.com/photo/2019/02/22/17/47/donkey-4014039_1280.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2020/06/04/18/02/boat-5259883_1280.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2020/02/28/15/20/rhododendron-4887691_1280.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2022/07/25/09/20/shiva-7343264_1280.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2015/07/01/14/35/monk-827601_1280.jpg" alt="">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6vmmUp9uDJ8O-dk9h_pnI3x0hgg4vKwtvqZRPjlDN24gLThGIG61Zb63MJwGstUwqjzGt3isJ4EOELhk3_IOujo8e-R7-LsK2BZsPQNoZx9B7RDlLLs5HBHiPUrw5sfk1to564SAjOY8/s1600/Tea+Garden.jpg" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+<script>
+    let images = document.querySelectorAll(".image-container img");
+    let viewImage = document.querySelector(".view-image");
+    let fullImage = document.querySelector(".view-image img");
+    let closeBtn = document.querySelector(".view-image span");
+    for(let image of images){
+        image.addEventListener("click",function(e){
+            console.log(e);
+            viewImage.style.display = "flex";
+            fullImage.src = e.target.src;
+        })
+    }
+    closeBtn.addEventListener('click',function(){
+        viewImage.style.display = "none";
+    })
+</script>
+</html>
